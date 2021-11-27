@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: Activadad3-Dog
+  m_EditorClassIdentifier: 
+  brickName: Assets/BehaviorTree/Activadad3-Dog.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"776975ef2db8173418d97fe5863a6095\" nextId=\"10\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"wanderArea\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <RandomSelectorNode id=\"9\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <RandomSelectorNode
+    id=\"9\">\r\n      <probs>\r\n        <elem>1</elem>\r\n        <elem>1</elem>\r\n     
+    </probs>\r\n      <children>\r\n        <elem>\r\n          <SubbehaviorNode
+    id=\"2\" />\r\n        </elem>\r\n        <elem>\r\n          <TimeLimitDecorator
+    id=\"4\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RandomSelectorNode>\r\n   
+    <SubbehaviorNode id=\"2\">\r\n      <_guid>78cc4d3b3dec2874daa98d1d43739516</_guid>\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"wanderArea\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"wanderArea\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"wanderPosition\" type=\"UnityEngine.Vector3\"
+    isBlackboard=\"True\" blackboard=\"wanderPosition\" />\r\n        </outputValues>\r\n     
+    </outputParams>\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n    <TimeLimitDecorator
+    id=\"4\" TimeLimit=\"5\">\r\n      <child>\r\n        <SubbehaviorNode id=\"5\"
+    />\r\n      </child>\r\n      <inputParams />\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </TimeLimitDecorator>\r\n    <SubbehaviorNode id=\"5\">\r\n     
+    <_guid>aa4b8b1b2c287234ab111537ad20967e</_guid>\r\n      <inputParams />\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"foundGameObject\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" />\r\n        </outputValues>\r\n     
+    </outputParams>\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n  </runtimeInfo>\r\n 
+    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"Activadad3-Dog\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SubbehaviorNode id=\"2\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <TimeLimitDecorator id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SubbehaviorNode id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <RandomSelectorNode id=\"9\" />\r\n        </elem>\r\n      </_rootList>\r\n     
+    <_nodes>\r\n        <nodes>\r\n          <RepeatDecorator id=\"1\" />\r\n         
+    <SubbehaviorNode id=\"2\" />\r\n          <TimeLimitDecorator id=\"4\" />\r\n         
+    <SubbehaviorNode id=\"5\" />\r\n          <RandomSelectorNode id=\"9\" />\r\n       
+    </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"403 61\"
+    name=\"Repeat\" description=\"Repeats the execution of its child node\" cardinality=\"1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
+    <RandomSelectorNode id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"369 213\" name=\"Random Selector\" description=\"Selects
+    randomly one of its children\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RandomSelectorNode id=\"9\" />\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RandomSelectorNode>\r\n   
+    <SubbehaviorNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"262 439\" name=\"Wander\" description=\"\" cardinality=\"-1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <RandomSelectorNode
+    id=\"9\" />\r\n          <RandomSelectorNode id=\"9\" />\r\n        </data>\r\n     
+    </_data>\r\n    </SubbehaviorNode>\r\n    <TimeLimitDecorator id=\"4\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"521 345\"
+    name=\"TimeLimit\" description=\"TimeLimit\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RandomSelectorNode id=\"9\" />\r\n         
+    <RandomSelectorNode id=\"9\" />\r\n        </data>\r\n      </_data>\r\n    </TimeLimitDecorator>\r\n   
+    <SubbehaviorNode id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"515 507\" name=\"HuntObject\" description=\"\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <SubbehaviorNode id=\"5\" />\r\n          <TimeLimitDecorator id=\"4\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 1
+  subslist:
+  - {fileID: 11400000, guid: 78cc4d3b3dec2874daa98d1d43739516, type: 2}
+  - {fileID: 11400000, guid: aa4b8b1b2c287234ab111537ad20967e, type: 2}
+  _guid: 776975ef2db8173418d97fe5863a6095
